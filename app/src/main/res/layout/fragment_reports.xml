@@ -1,69 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_reports">
 
    <GridLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:columnOrderPreserved="false"
-       android:alignmentMode="alignMargins"
+       android:alignmentMode="alignBounds"
        android:columnCount="2"
-       android:rowCount="1">
+       android:rowCount="1"
+       android:layout_gravity="fill"
+       android:layout_columnWeight="1">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_margin="12dp">
+        android:layout_margin="12dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="5dp"
+            android:background="@drawable/paidbackground">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/payment"
-                android:paddingRight="2dp"/>
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/ic_monetization_green"
+                android:paddingRight="1dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Add Payment"
-                android:textSize="13sp"/>
+                android:layout_marginTop="20dp"
+                android:text="$1500"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 paid units"
+                android:paddingTop="@dimen/cardview_default_radius"/>
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
        <androidx.cardview.widget.CardView
-           android:layout_width="wrap_content"
+           android:layout_width="0dp"
            android:layout_height="wrap_content"
            android:layout_columnWeight="1"
            android:layout_rowWeight="1"
-           android:layout_margin="12dp">
+           android:layout_margin="12dp"
+           >
 
            <LinearLayout
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:orientation="vertical"
-               android:padding="16dp">
+               android:padding="5dp"
+               android:background="@drawable/duebackground">
 
                <ImageView
-                   android:layout_width="40dp"
-                   android:layout_height="40dp"
-                   android:src="@drawable/payment"/>
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   app:srcCompat="@drawable/ic_monetization_red"
+                   android:paddingRight="1dp"/>
 
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:layout_marginTop="12dp"
-                   android:text="Add Payment"
-                   android:textSize="13sp"/>
+                   android:layout_marginTop="20dp"
+                   android:text="$210"
+                   android:textSize="20sp"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="3 unpaid units"
+                   android:paddingTop="@dimen/cardview_default_radius"/>
 
            </LinearLayout>
 
