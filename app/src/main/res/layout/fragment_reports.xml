@@ -13,22 +13,26 @@
        android:columnCount="2"
        android:rowCount="1"
        android:layout_gravity="fill"
-       android:layout_columnWeight="1">
+       android:layout_columnWeight="1"
+       android:id="@+id/grid_report"
+       android:padding="3dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
         android:layout_margin="12dp"
-        >
+        app:cardCornerRadius="4dp"
+        app:cardUseCompatPadding="true"
+        android:background="@drawable/paidbackground">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="5dp"
-            android:background="@drawable/paidbackground">
+            >
 
             <ImageView
                 android:layout_width="25dp"
@@ -59,14 +63,16 @@
            android:layout_columnWeight="1"
            android:layout_rowWeight="1"
            android:layout_margin="12dp"
-           >
+           android:background="@drawable/duebackground"
+           android:padding="3dp"
+           app:cardCornerRadius="4dp"
+           app:cardUseCompatPadding="true">
 
            <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
                android:orientation="vertical"
-               android:padding="5dp"
-               android:background="@drawable/duebackground">
+               android:padding="5dp">
 
                <ImageView
                    android:layout_width="25dp"
@@ -94,5 +100,44 @@
 
 
    </GridLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/monthly_reports_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="12dp"
+        android:layout_margin="12dp"
+        android:layout_below="@+id/grid_report"
+        android:layout_centerInParent="true"
+        android:background="@drawable/custom_button"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/time_and_date"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="View Monthly Reports"
+                android:textSize="13sp"
+                android:textColor="#FA71CD"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.MyLandlordStudio.Dashbaord" />
-        <activity android:name="com.example.MyLandlordStudio.RegisterNationality" />
-        <activity android:name="com.example.MyLandlordStudio.RegisterActivity" />
-        <activity android:name="com.example.MyLandlordStudio.MainActivity">
+        <activity android:name=".Monthly_reports_view"></activity>
+        <activity android:name=".Dashbaord" />
+        <activity android:name=".RegisterNationality" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
