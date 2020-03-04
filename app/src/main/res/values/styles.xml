@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -17,7 +17,42 @@
         <item name="android:textColorSecondary">@android:color/system_notification_accent_color</item>
     </style>
 
+    <style name="TextLabel" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
 
+
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <!-- You still need the individual text field styles below to change non-theme attributes -->
+
+    <style name="Widget.App.TextInputLayout.FilledBox" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.TextInputLayout.FilledBox</item>
+        <item name="hintTextColor">@null</item>
+        <item name="android:textColorHint">@null</item>
+        <item name="hintTextAppearance">@style/TextAppearance.App.HintText</item>
+        <item name="boxBackgroundColor">@null</item>
+    </style>
+
+    <style name="Widget.App.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="hintTextColor">@null</item>
+        <item name="android:textColorHint">@null</item>
+        <item name="hintTextAppearance">@style/TextAppearance.App.HintText</item>
+    </style>
+
+    <style name="TextAppearance.App.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
+
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.TextInputLayout.FilledBox" parent="ShapeAppearance.App.SmallComponent">
+        <item name="cornerSizeBottomLeft">@dimen/mtrl_textinput_box_corner_radius_small</item>
+        <item name="cornerSizeBottomRight">@dimen/mtrl_textinput_box_corner_radius_small</item>
+    </style>
 
 
 </resources>

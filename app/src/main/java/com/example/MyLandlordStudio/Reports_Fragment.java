@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,6 +25,7 @@ public class Reports_Fragment extends Fragment {
         //to use find View by id use container
         View view=inflater.inflate(R.layout.fragment_reports,container,false);
         CardView monthly_reports_cardView = view.findViewById(R.id.monthly_reports_cardview);
+
 
         monthly_reports_cardView.setOnClickListener(new View.OnClickListener() {
             @Override
