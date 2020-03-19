@@ -17,7 +17,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class Payment extends AppCompatActivity {
+public class PaymentActivity extends AppCompatActivity {
 
     String payee;
     Double amount;
@@ -53,7 +53,7 @@ public class Payment extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                new DatePickerDialog(Payment.this, date, myCalendar
+                new DatePickerDialog(PaymentActivity.this, date, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
 

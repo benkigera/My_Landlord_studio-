@@ -10,9 +10,9 @@
 
     <EditText
         android:id="@+id/editTextFname"
-        android:layout_width="250dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="280dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="100dp"
         android:background="#11000000"
         android:ems="10"
         android:inputType="textPersonName"
@@ -20,13 +20,16 @@
         android:textSize="16dp"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:textColorHint="#666666"/>
+        android:textColorHint="#666666"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:textColor="@android:color/white"
+        />
 
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextLname"
-        android:layout_width="250dp"
-        android:layout_height="30dp"
+        android:layout_width="280dp"
+        android:layout_height="35dp"
         android:layout_marginTop="38dp"
         android:background="#11000000"
         android:hint="Last Name"
@@ -35,12 +38,16 @@
         android:layout_alignStart="@+id/editTextFname"
         android:layout_alignLeft="@+id/editTextFname"
         android:ems="10"
-        android:inputType="text" />
+        android:inputType="text"
+
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:textColor="@android:color/white"
+        />
 
     <EditText
         android:id="@+id/editTextEmail"
-        android:layout_width="250dp"
-        android:layout_height="30dp"
+        android:layout_width="280dp"
+        android:layout_height="35dp"
         android:layout_marginTop="38dp"
         android:background="#11000000"
         android:hint="Email Address"
@@ -49,38 +56,44 @@
         android:layout_alignStart="@+id/editTextLname"
         android:layout_alignLeft="@+id/editTextLname"
         android:ems="10"
-        android:inputType="text" />
+        android:inputType="text"
+        android:drawableLeft="@drawable/ic_email_grey_24dp"
+        android:textColor="@android:color/white"/>
 
     <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="250dp"
-        android:layout_height="30dp"
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_width="280dp"
+        android:layout_height="35dp"
         android:layout_marginTop="38dp"
         android:background="#11000000"
-        android:hint="Password"
+        android:hint="Phone Number"
         android:textColorHint="#666666"
         android:layout_below="@+id/editTextEmail"
         android:layout_alignStart="@+id/editTextEmail"
         android:layout_alignLeft="@+id/editTextEmail"
         android:ems="10"
-        android:inputType="text" />
+        android:inputType="text"
+        android:drawableLeft="@drawable/ic_phone_black_24dp"
+        android:textColor="@android:color/white"/>
 
     <EditText
-        android:id="@+id/editTextPconfirmation"
-        android:layout_width="250dp"
-        android:layout_height="30dp"
+        android:id="@+id/editTextPassword"
+        android:layout_width="280dp"
+        android:layout_height="35dp"
         android:layout_marginTop="38dp"
         android:background="#11000000"
-        android:hint="Confirm Password"
+        android:hint="Password"
         android:textColorHint="#666666"
-        android:layout_below="@+id/editTextPassword"
-        android:layout_alignStart="@+id/editTextPassword"
-        android:layout_alignLeft="@+id/editTextPassword"
+        android:layout_below="@+id/editTextPhoneNumber"
+        android:layout_alignStart="@+id/editTextPhoneNumber"
+        android:layout_alignLeft="@+id/editTextPhoneNumber"
         android:ems="10"
-        android:inputType="text" />
+        android:drawableLeft="@drawable/ic_action_pass"
+        android:inputType="textPassword"
+        android:textColor="@android:color/white"/>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview_next"
+        android:id="@+id/cardview_register"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_below="@id/editTextPassword"
@@ -99,22 +112,32 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Next"
+                android:text="Register"
                 android:textColor="#ffffff"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_circular"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:layout_below="@id/textViewRegister"/>
 
     <TextView
         android:id="@+id/textViewRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="By Creating an account,you agree to our terms"
-        android:layout_below="@+id/cardview_next"
+        android:layout_below="@+id/cardview_register"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffff"
         android:layout_marginTop="20dp"
         />
+
+
 
 
 </RelativeLayout>

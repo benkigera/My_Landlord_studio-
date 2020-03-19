@@ -9,13 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Payment"></activity>
+        <activity android:name=".PropertyListView"></activity>
+        <activity android:name=".Unit" />
+        <activity android:name=".PropertyActivity" />
+        <activity android:name=".PaymentActivity" />
         <activity android:name=".Tenant_details_activity" />
-        <activity android:name=".Monthly_reports_view" />
-        <activity android:name=".Dashbaord" />
-        <activity android:name=".RegisterNationality" />
+        <activity android:name=".Monthly_reports_view_activity" />
+        <activity android:name=".ApplicationFrame" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".LoginAcitivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

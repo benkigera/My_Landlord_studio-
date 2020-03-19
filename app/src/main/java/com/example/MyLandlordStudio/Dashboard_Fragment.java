@@ -13,8 +13,13 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
-public class Dashbaord_Fragment extends Fragment {
+
+
+public class Dashboard_Fragment extends Fragment {
+
+    ExtendedFloatingActionButton floatingActionButton;
 
 
     @Nullable
@@ -28,11 +33,25 @@ public class Dashbaord_Fragment extends Fragment {
         CardView add_payment_cardview = view.findViewById(R.id.add_payment_cardview);
 
 
+        //floating action to add property list
+
+
+        floatingActionButton=view.findViewById(R.id.floating_action_button);
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent propertyActivityIntent=new Intent(getActivity(), PropertyActivity.class);
+                startActivity(propertyActivityIntent);
+            }
+        });
+
+
         add_payment_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //intent from fragment to activity
-                Intent paymentActivityIntent=new Intent(getActivity(),Payment.class);
+                Intent paymentActivityIntent=new Intent(getActivity(), PaymentActivity.class);
                 startActivity(paymentActivityIntent);
 
             }

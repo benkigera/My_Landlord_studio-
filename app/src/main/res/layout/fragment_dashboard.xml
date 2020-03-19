@@ -43,8 +43,8 @@
                     android:gravity="center">
                     
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/payment"/>
 
                     <TextView
@@ -74,8 +74,8 @@
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/mail"/>
 
                     <TextView
@@ -105,8 +105,8 @@
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/analytics"/>
 
                     <TextView
@@ -136,8 +136,8 @@
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/vendor"/>
 
                     <TextView
@@ -167,8 +167,8 @@
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/expenses"/>
 
                     <TextView
@@ -200,8 +200,8 @@
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/taxes"/>
 
                     <TextView
@@ -217,6 +217,21 @@
 
 
         </GridLayout>
+
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/floating_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Add property"
+            app:icon="@drawable/plus"
+            app:layout_anchorGravity="center"
+            android:layout_gravity="center"
+            app:iconTint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:background="@color/colorAccent" />
 
 
     </LinearLayout>

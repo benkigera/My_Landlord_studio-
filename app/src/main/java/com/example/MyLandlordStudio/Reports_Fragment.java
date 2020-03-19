@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,7 +30,7 @@ public class Reports_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
               //intent from fragment to activity
-                Intent monthly_reports_intent=new Intent(getActivity(),Monthly_reports_view.class);
+                Intent monthly_reports_intent=new Intent(getActivity(), Monthly_reports_view_activity.class);
                 startActivity(monthly_reports_intent);
 
             }

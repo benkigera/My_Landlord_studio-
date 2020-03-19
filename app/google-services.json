@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1071943862809",
+    "firebase_url": "https://mylandlordstudio.firebaseio.com",
+    "project_id": "mylandlordstudio",
+    "storage_bucket": "mylandlordstudio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071943862809:android:35f70c8b9c326e12f47888",
+        "android_client_info": {
+          "package_name": "com.example.MyLandlordStudio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071943862809-qpgvjirfe5002teqpmlpik29eoqe611s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.MyLandlordStudio",
+            "certificate_hash": "90a7fcbc95364dc1764f5297a0324bc163f19015"
+          }
+        },
+        {
+          "client_id": "1071943862809-7cr30t2id5rm3tqobfq614nft2qbrktf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDalSVRM4SM88WFTvoYGgsBzDukqQBssC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1071943862809-7cr30t2id5rm3tqobfq614nft2qbrktf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

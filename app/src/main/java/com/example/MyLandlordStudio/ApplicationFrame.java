@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Dashbaord extends AppCompatActivity {
+public class ApplicationFrame extends AppCompatActivity {
     Fragment selectedFragment=null;
     Toolbar toolbar;
 
@@ -20,13 +20,13 @@ public class Dashbaord extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashbaord);
+        setContentView(R.layout.activity_dashboard);
 
         //bottom navigation bar code
 
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Dashbaord_Fragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Dashboard_Fragment()).commit();
 
         //universal top navigation bar code for the whole app
 
@@ -63,7 +63,7 @@ public class Dashbaord extends AppCompatActivity {
                         switch (item.getItemId()){
 
                             case R.id.Dashboard:
-                                selectedFragment=new Dashbaord_Fragment();
+                                selectedFragment=new Dashboard_Fragment();
                                 item.setChecked(true);
 
                                 break;
