@@ -34,7 +34,8 @@ public class RegisterActivity extends AppCompatActivity {
     ProgressBar progress_circular;
     FirebaseFirestore firebaseFirestore;
     FirebaseAuth firebaseAuth;
-    private String UserID;
+    private String userId;
+
 
 
     @Override
@@ -56,11 +57,7 @@ public class RegisterActivity extends AppCompatActivity {
         firebaseFirestore=FirebaseFirestore.getInstance();
 
 
-    //    if (firebaseAuth.getCurrentUser() !=null ){
 
-        //    startActivity(new Intent(getApplicationContext(),LoginAcitivity.class));
-        //    finish();
-     //   }
 
 
         cardview_register.setOnClickListener(new View.OnClickListener() {
@@ -103,8 +100,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                         if (task.isSuccessful()){
                             Toast.makeText(RegisterActivity.this,"User Created.",Toast.LENGTH_SHORT).show();
-                            UserID=firebaseAuth.getCurrentUser().getUid();
-                            DocumentReference documentReference=firebaseFirestore.collection("Users").document(UserID);
+                            userId =firebaseAuth.getCurrentUser().getUid();
+                            DocumentReference documentReference=firebaseFirestore.collection("users").document(userId);
                             Map<String,Object> user=new HashMap<>();
                             user.put("FirstName",firstName);
                             user.put("LastName",lastName);
@@ -113,7 +110,7 @@ public class RegisterActivity extends AppCompatActivity {
                             documentReference.set(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
-                                    Log.d(TAG,"OnSuccess:user profile is created for" + UserID );
+                                    Log.d(TAG,"OnSuccess:user profile is created for" + userId);
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override

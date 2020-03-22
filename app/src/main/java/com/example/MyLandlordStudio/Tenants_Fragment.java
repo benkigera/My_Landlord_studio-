@@ -19,6 +19,18 @@ public class Tenants_Fragment extends Fragment {
         //to use find View by id use container
         View view=inflater.inflate(R.layout.fragment_tenants,container,false);
         CardView add_tenants_cardview = view.findViewById(R.id.add_tenants_cardview);
+        CardView view_tenant=view.findViewById(R.id.view_tenant);
+
+        view_tenant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent tenant_detail=new Intent(getActivity(),ViewTenantsActivity.class);
+                startActivity(tenant_detail);
+
+
+            }
+        });
 
 
         add_tenants_cardview.setOnClickListener(new View.OnClickListener() {

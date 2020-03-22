@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PropertyListView"></activity>
+        <activity android:name=".ViewTenantsActivity"></activity>
+        <activity android:name=".PropertyListView" />
         <activity android:name=".Unit" />
         <activity android:name=".PropertyActivity" />
         <activity android:name=".PaymentActivity" />
@@ -17,7 +18,6 @@
         <activity android:name=".Monthly_reports_view_activity" />
         <activity android:name=".ApplicationFrame" />
         <activity android:name=".RegisterActivity" />
-
         <activity android:name=".LoginAcitivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

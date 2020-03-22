@@ -60,7 +60,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/first_name"
+        android:id="@+id/first_name_Layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="First Name"
@@ -75,16 +75,16 @@
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/first_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-             />
+            android:layout_height="wrap_content" />
 
 
 
     </com.google.android.material.textfield.TextInputLayout>
 
       <com.google.android.material.textfield.TextInputLayout
-          android:id="@+id/second_name"
+          android:id="@+id/second_name_layout"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:hint="Second Name"
@@ -98,9 +98,9 @@
 
 
           <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/second_name"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              />
+              android:layout_height="wrap_content" />
 
 
 
@@ -131,7 +131,7 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phone_number"
+                android:id="@+id/phone_number_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Phone Number"
@@ -145,9 +145,9 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phone_number"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="wrap_content" />
 
 
 
@@ -177,7 +177,7 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/house_number"
+                android:id="@+id/house_number_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="House Number"
@@ -192,16 +192,16 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/house_number"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="wrap_content" />
 
 
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/floor_number"
+                android:id="@+id/floor_number_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Floor"
@@ -216,6 +216,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/floor_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     />
@@ -251,7 +252,7 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/national_id"
+                android:id="@+id/national_id_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="ID Number"
@@ -266,6 +267,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/national_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     />
@@ -299,7 +301,7 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/email"
+                android:id="@+id/email_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
@@ -314,6 +316,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -345,7 +348,7 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/contract_date"
+                android:id="@+id/contract_date_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:boxBackgroundMode="outline"
@@ -358,6 +361,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/current_date"
@@ -386,7 +390,7 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/amount_paid"
+                android:id="@+id/amount_paid_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Amount Paid"
@@ -400,6 +404,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amount_paid"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"/>
@@ -409,7 +414,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/For"
+                android:id="@+id/payment_for_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="For"
@@ -423,6 +428,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/payment_for"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     />
