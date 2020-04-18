@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewTenantsActivity"></activity>
+        <activity android:name=".OnPropertyAddSuccess"></activity>
+        <activity android:name=".ViewTenantsActivity" />
         <activity android:name=".PropertyListView" />
         <activity android:name=".Unit" />
         <activity android:name=".PropertyActivity" />

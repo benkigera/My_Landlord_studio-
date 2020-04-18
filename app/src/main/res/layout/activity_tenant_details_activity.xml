@@ -17,9 +17,10 @@
             android:layout_height="?attr/actionBarSize"
             android:id="@+id/add_tenants_toolbar"
             android:background="@color/colorAccent"
-            app:titleTextColor="@color/cardview_light_background"
-            app:subtitleTextColor="@color/cardview_shadow_start_color"
-            app:layout_scrollFlags="scroll|enterAlways">
+            app:titleTextColor="@android:color/white"
+            app:subtitleTextColor="@android:color/white"
+            app:layout_scrollFlags="scroll|enterAlways"
+            tools:ignore="PrivateResource">
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -43,7 +44,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
       android:orientation="horizontal"
-      android:paddingRight="30dp">
+      android:paddingRight="30dp"
+      android:paddingEnd="30dp"
+      tools:ignore="RtlSymmetry">
       <com.google.android.material.card.MaterialCardView
           android:layout_width="50dp"
           android:layout_height="match_parent">
@@ -52,7 +55,8 @@
               android:layout_width="30dp"
               android:layout_height="match_parent"
               app:srcCompat="@drawable/ic_person_black_24dp"
-              android:layout_gravity="center"/>
+              android:layout_gravity="center"
+              android:contentDescription="@string/todo" />
 
       </com.google.android.material.card.MaterialCardView>
 
@@ -63,7 +67,7 @@
         android:id="@+id/first_name_Layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="First Name"
+        android:hint="@string/first_name"
         app:boxBackgroundMode="outline"
         style="@style/Widget.App.TextInputLayout.OutlinedBox"
         app:counterEnabled="true"
@@ -71,13 +75,15 @@
         app:boxStrokeColor="#FFFA71CD"
         android:layout_weight="1"
         android:paddingRight="10dp"
-        app:endIconMode="clear_text">
+        app:endIconMode="clear_text"
+        android:paddingEnd="10dp">
 
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/first_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:maxLines="1"/>
 
 
 
@@ -87,7 +93,7 @@
           android:id="@+id/second_name_layout"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:hint="Second Name"
+          android:hint="@string/second_name"
           app:boxBackgroundMode="outline"
           style="@style/Widget.App.TextInputLayout.OutlinedBox"
           app:counterEnabled="true"
@@ -100,7 +106,8 @@
           <com.google.android.material.textfield.TextInputEditText
               android:id="@+id/second_name"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content" />
+              android:layout_height="wrap_content"
+              android:maxLines="1"/>
 
 
 
@@ -113,7 +120,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingRight="30dp">
+            android:paddingRight="30dp"
+            android:paddingEnd="30dp"
+            tools:ignore="RtlSymmetry">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="50dp"
@@ -123,7 +132,8 @@
                     android:layout_width="30dp"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/ic_phone_black_24dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/todo" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -134,7 +144,7 @@
                 android:id="@+id/phone_number_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Phone Number"
+                android:hint="@string/phone_number"
                 app:boxBackgroundMode="outline"
                 style="@style/Widget.App.TextInputLayout.OutlinedBox"
                 app:helperText="You can enter name here"
@@ -147,7 +157,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/phone_number"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:digits="1234567890"/>
 
 
 
@@ -161,7 +173,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingRight="30dp">
+            android:paddingRight="30dp"
+            android:paddingEnd="30dp"
+            tools:ignore="RtlSymmetry">
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="50dp"
                 android:layout_height="match_parent">
@@ -169,7 +183,8 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/todo" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -180,7 +195,7 @@
                 android:id="@+id/house_number_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="House Number"
+                android:hint="@string/house_number"
                 app:hintAnimationEnabled="true"
                 app:boxBackgroundMode="outline"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -188,13 +203,15 @@
                 app:counterMaxLength="5"
                 app:boxStrokeColor="#FFFA71CD"
                 android:layout_weight="1"
-                android:paddingRight="2dp">
+                android:paddingRight="2dp"
+                android:paddingEnd="2dp">
 
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/house_number"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"/>
 
 
 
@@ -204,7 +221,7 @@
                 android:id="@+id/floor_number_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Floor"
+                android:hint="@string/floor"
                 app:boxBackgroundMode="outline"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:counterEnabled="true"
@@ -219,7 +236,8 @@
                     android:id="@+id/floor_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    android:inputType="phone"
+                    android:digits="1234567890" />
 
 
 
@@ -235,7 +253,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingRight="30dp">
+            android:paddingRight="30dp"
+            android:paddingEnd="30dp"
+            tools:ignore="RtlSymmetry">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="50dp"
@@ -244,7 +264,8 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/todo" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -255,7 +276,7 @@
                 android:id="@+id/national_id_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="ID Number"
+                android:hint="@string/id_number"
                 app:boxBackgroundMode="outline"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:helperText="enter your id number above"
@@ -263,14 +284,18 @@
                 app:counterMaxLength="10"
                 app:boxStrokeColor="#FFFA71CD"
                 app:endIconMode="clear_text"
-                app:startIconDrawable="@drawable/ic_card_membership_black_24dp">
+                app:startIconDrawable="@drawable/ic_card_membership_black_24dp"
+                >
 
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/national_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    android:inputType="number"
+                    android:digits="1234567890"
+                    android:maxLines="1"
+                    android:maxLength="9"/>
 
 
 
@@ -312,13 +337,16 @@
                 app:counterMaxLength="30"
                 app:boxStrokeColor="#FFFA71CD"
                 app:endIconMode="clear_text"
-                app:endIconTintMode="screen">
+                app:endIconTintMode="screen"
+                >
 
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="textFilter|textMultiLine"
+                    android:maxLines="1"/>
 
 
 
@@ -330,7 +358,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingRight="30dp">
+            android:paddingRight="30dp"
+            android:paddingEnd="30dp"
+            tools:ignore="RtlSymmetry">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="50dp"
@@ -340,7 +370,8 @@
                     android:layout_width="30dp"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/ic_date_range_black_24dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:contentDescription="TODO" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -407,7 +438,9 @@
                     android:id="@+id/amount_paid"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:inputType="phone"
+                    android:digits="1234567890"/>
 
 
 

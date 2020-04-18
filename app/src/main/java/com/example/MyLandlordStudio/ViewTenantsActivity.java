@@ -2,10 +2,12 @@ package com.example.MyLandlordStudio;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -26,6 +28,8 @@ public class ViewTenantsActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private List tenantList;
     private TenantsAdapter adapter;
+    private Toolbar title_bar;
+
 
 
     private FirebaseFirestore db;
@@ -36,10 +40,16 @@ public class ViewTenantsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_tenants);
 
         recyclerView=findViewById(R.id.recyclerview_tenants);
+        title_bar=findViewById(R.id.title_bar);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         db=FirebaseFirestore.getInstance();
         String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        setSupportActionBar(title_bar);
+
+
+
 
         tenantList=new ArrayList<>();
         adapter=new TenantsAdapter(this,tenantList);
@@ -80,4 +90,11 @@ public class ViewTenantsActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.search_tenant,menu);
+        return true;}
+
+
 }

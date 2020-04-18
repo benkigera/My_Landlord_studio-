@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.graphics.MaskFilter;
 import android.os.Bundle;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +25,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import static com.example.MyLandlordStudio.MaskWatcher.buildCpf;
+
 public class Tenant_details_activity extends AppCompatActivity {
 
     private TextInputEditText first_name;
@@ -34,6 +38,7 @@ public class Tenant_details_activity extends AppCompatActivity {
     private TextInputEditText amount_paid;
     private TextInputEditText payment_for;
     private TextInputEditText email;
+
 
 
     private FirebaseFirestore db;
@@ -70,6 +75,11 @@ public class Tenant_details_activity extends AppCompatActivity {
         Toolbar add_tenants_toolbar = findViewById(R.id.add_tenants_toolbar);
         setSupportActionBar(add_tenants_toolbar);
         add_tenants_toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+
+
+        //masking for national id
+
+        national_id.addTextChangedListener( buildCpf());
 
         //set button click method
 
@@ -182,4 +192,6 @@ public class Tenant_details_activity extends AppCompatActivity {
         return true;
 
     }
+
+
 }

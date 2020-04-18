@@ -5,64 +5,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_tenants">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/add_tenants_cardview"
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        app:cardElevation="6dp"
-        app:cardCornerRadius="12dp"
-        android:layout_margin="12dp"
-        android:layout_below="@+id/grid_report"
-        android:background="@drawable/custom_button"
-        >
+        android:layout_below="@+id/top_app_bar"
+        app:tabTextColor="#808080"
+        android:background="@android:color/white"
+        style="@style/Widget.MaterialComponents.TabLayout"
+        app:tabRippleColor="@color/colorAccent"
+        app:tabIconTint="@color/colorAccent"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:gravity="center">
 
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:src="@drawable/real_tenant"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Add Tenant"
-                android:textSize="13sp"
-                android:textColor="#FA71CD"/>
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/view_tenant"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/add_tenants_cardview"
-        android:background="@color/cardview_dark_background"
-        app:cardElevation="6dp"
-        app:cardCornerRadius="12dp"
-        android:layout_margin="12dp">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tablayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior" />
 
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="30dp"
-                android:text="View Tenants"
-                android:layout_gravity="center"
-                android:textColor="@color/colorAccent"/>
+
+    
 
 
-
-    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

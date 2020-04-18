@@ -8,40 +8,82 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+
+import com.example.MyLandlordStudio.ui.main.SectionsPagerAdapter;
+import com.google.android.material.tabs.TabLayout;
 
 public class Tenants_Fragment extends Fragment {
+
+    private SectionsPagerAdapter sectionsPagerAdapter;
+    private ViewPager viewPager;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         //to use find View by id use container
         View view=inflater.inflate(R.layout.fragment_tenants,container,false);
-        CardView add_tenants_cardview = view.findViewById(R.id.add_tenants_cardview);
-        CardView view_tenant=view.findViewById(R.id.view_tenant);
-
-        view_tenant.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent tenant_detail=new Intent(getActivity(),ViewTenantsActivity.class);
-                startActivity(tenant_detail);
 
 
-            }
-        });
+        //set up the viewPager with the sections adapter
+        sectionsPagerAdapter=new SectionsPagerAdapter(getChildFragmentManager());
+        viewPager=view.findViewById(R.id.view_pager);
+        setupViewPager(viewPager);
+        TabLayout tabLayout=view.findViewById(R.id.tablayout);
+        tabLayout.setupWithViewPager(viewPager);
 
 
-        add_tenants_cardview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //intent from fragment to activity
-                Intent tenant_detail=new Intent(getActivity(),Tenant_details_activity.class);
-                startActivity(tenant_detail);
 
-            }
-        });
+        tabLayout.setupWithViewPager(viewPager);
+
+
+// tab layout  icons
+        int[] icons = {
+                R.drawable.ic_timeline_black_24dp,
+                R.drawable.ic_timeline_black_24dp,
+                R.drawable.ic_timeline_black_24dp
+        };
+
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            tabLayout.getTabAt(i).setIcon(icons[i]);
+        }
+
+
+
+
+
+
         return view;
+    }
+
+
+
+
+    private void setupViewPager(ViewPager viewPager){
+
+        SectionsPagerAdapter adapter=new SectionsPagerAdapter(getChildFragmentManager());
+
+        adapter.addFragment(new Tab1Fragment(),"Past");
+        adapter.addFragment(new Tab2Fragment(),"Current");
+        adapter.addFragment(new Tab3Fragment(),"Prospects");
+
+        viewPager.setAdapter(adapter);
+
+    }
+
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
+    }
+    @Override
+    public void onStop() {
+        super.onStop();
+        ((AppCompatActivity)getActivity()).getSupportActionBar().show();
     }
 }

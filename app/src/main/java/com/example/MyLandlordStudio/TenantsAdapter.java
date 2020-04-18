@@ -34,7 +34,7 @@ public class TenantsAdapter extends RecyclerView.Adapter<TenantsAdapter.ProductV
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
         Tenant tenant = tenantList.get(position);
-
+        holder.Firstname.setText(tenant.getFirst_name());
         holder.SecondName.setText(tenant.getSecond_name());
         holder.PhoneNumber.setText(tenant.getPhone_number());
         holder.Email.setText(tenant.getEmail());
@@ -49,11 +49,11 @@ public class TenantsAdapter extends RecyclerView.Adapter<TenantsAdapter.ProductV
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
-        TextView SecondName, PhoneNumber, Email, Amount, HouseNumber;
+        TextView Firstname,SecondName, PhoneNumber, Email, Amount, HouseNumber;
 
         public ProductViewHolder(View itemView) {
             super(itemView);
-
+            Firstname=itemView.findViewById(R.id.textView_FirstName);
             SecondName = itemView.findViewById(R.id.textView_SecondName);
             PhoneNumber = itemView.findViewById(R.id.textView_phoneNumber);
             Email = itemView.findViewById(R.id.textView_email);
