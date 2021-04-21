@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:padding="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="10dp">
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:backgroundTint="@color/island_white">
+
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            android:background="@drawable/back"
+                            android:paddingRight="@dimen/badge"
+                            android:backgroundTint="@color/white">
+
+
+                            <TextView
+                                    android:id="@+id/textView_propertyName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Thames Apartment"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:textColor="@color/colorAccent"
+                                    android:background="@drawable/transparent_background"
+                                    android:padding="@dimen/badge"/>
+                            <TextView
+                                android:id="@+id/textView_Location"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Githurai"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                android:textSize="18sp"
+                                android:textColor="@color/gray"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:background="@color/island_white">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@color/star_white"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="occupied:34"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:background="@drawable/back"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="vacant:6"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:background="@drawable/back"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="units : 40"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:background="@drawable/back"/>
+
+                        </LinearLayout>
+
+                </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+<!--<LinearLayout-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:orientation="horizontal"-->
+    <!--&gt;-->
+
+
+<!--&lt;!&ndash;<com.google.android.material.card.MaterialCardView&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_width="70dp"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_height="70dp"&ndash;&gt;-->
+<!--&lt;!&ndash;app:strokeColor="@color/colorAccent"&ndash;&gt;-->
+<!--&lt;!&ndash;android:padding="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;android:background="@color/colorAccent">&ndash;&gt;-->
+<!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_height="fill_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;android:id="@+id/paymentlogo"&ndash;&gt;-->
+<!--&lt;!&ndash;android:scaleType="fitCenter"&ndash;&gt;-->
+<!--&lt;!&ndash;android:background="@color/colorAccent"/>&ndash;&gt;-->
+<!--&lt;!&ndash;</com.google.android.material.card.MaterialCardView>&ndash;&gt;-->
+
+
+
+
+
+<!--</LinearLayout>-->
