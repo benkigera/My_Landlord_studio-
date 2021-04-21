@@ -5,7 +5,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/description">
+    android:id="@+id/description"
+    android:background="@color/island_white"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,19 +21,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingRight="30dp">
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="50dp"
-                android:layout_height="match_parent">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_location_on_black_24dp" />
-
-            </com.google.android.material.card.MaterialCardView>
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -68,19 +61,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingRight="30dp">
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="50dp"
-                android:layout_height="match_parent">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                     />
-
-            </com.google.android.material.card.MaterialCardView>
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -119,19 +103,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingRight="30dp">
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="50dp"
-                android:layout_height="match_parent">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_location_city_black_24dp" />
-
-            </com.google.android.material.card.MaterialCardView>
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -167,18 +142,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingRight="30dp">
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="50dp"
-                android:layout_height="match_parent">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"/>
-
-            </com.google.android.material.card.MaterialCardView>
 
 
             <com.google.android.material.textfield.TextInputLayout

@@ -1,10 +1,10 @@
 package com.example.MyLandlordStudio;
 
 public class Property {
-    private String Locaation;
-    private String Surbab;
-    private String City;
-    private String Country;
+    private String location;
+    private String surbab;
+    private String city;
+    private String country;
     private String name;
     private Double valuation;
     private boolean type;
@@ -14,76 +14,75 @@ public class Property {
 
     }
 
-    public Property(String locaation, String surbab, String city, String country, String name, Double valuation, boolean type, String number_of_units) {
-        Locaation = locaation;
-        Surbab = surbab;
-        City = city;
-        Country = country;
+    public Property(String location, String surbab, String city, String country, String name, Double valuation, boolean type, String number_of_units) {
+        this.location = location;
+        this.surbab = surbab;
+        this.city = city;
+        this.country = country;
         this.name = name;
         this.valuation = valuation;
         this.type = type;
         this.number_of_units = number_of_units;
     }
 
-    public String getLocaation() {
-        return Locaation;
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public String getSurbab() {
-        return Surbab;
+        return surbab;
+    }
+
+    public void setSurbab(String surbab) {
+        this.surbab = surbab;
     }
 
     public String getCity() {
-        return City;
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getCountry() {
-        return Country;
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public String getName() {
         return name;
     }
 
-    public Double getValuation() {
-        return valuation;
-    }
-
-    public boolean isType() {
-        return type;
-    }
-
-    public String getNumber_of_units() {
-        return number_of_units;
-    }
-
-
-    public void setLocaation(String locaation) {
-        Locaation = locaation;
-    }
-
-    public void setSurbab(String surbab) {
-        Surbab = surbab;
-    }
-
-    public void setCity(String city) {
-        City = city;
-    }
-
-    public void setCountry(String country) {
-        Country = country;
-    }
-
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Double getValuation() {
+        return valuation;
     }
 
     public void setValuation(Double valuation) {
         this.valuation = valuation;
     }
 
+    public boolean isType() {
+        return type;
+    }
+
     public void setType(boolean type) {
         this.type = type;
+    }
+
+    public String getNumber_of_units() {
+        return number_of_units;
     }
 
     public void setNumber_of_units(String number_of_units) {

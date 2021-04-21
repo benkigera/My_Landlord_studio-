@@ -1,15 +1,14 @@
 package com.example.MyLandlordStudio;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
@@ -40,16 +39,6 @@ public class Tenants_Fragment extends Fragment {
         tabLayout.setupWithViewPager(viewPager);
 
 
-// tab layout  icons
-        int[] icons = {
-                R.drawable.ic_timeline_black_24dp,
-                R.drawable.ic_timeline_black_24dp,
-                R.drawable.ic_timeline_black_24dp
-        };
-
-        for (int i = 0; i < tabLayout.getTabCount(); i++) {
-            tabLayout.getTabAt(i).setIcon(icons[i]);
-        }
 
 
 
@@ -66,9 +55,9 @@ public class Tenants_Fragment extends Fragment {
 
         SectionsPagerAdapter adapter=new SectionsPagerAdapter(getChildFragmentManager());
 
-        adapter.addFragment(new Tab1Fragment(),"Past");
-        adapter.addFragment(new Tab2Fragment(),"Current");
-        adapter.addFragment(new Tab3Fragment(),"Prospects");
+        adapter.addFragment(new currentFragment(),"Current");
+        adapter.addFragment(new prospectsFragment(),"Prospects");
+        adapter.addFragment(new pastFragment(),"Past");
 
         viewPager.setAdapter(adapter);
 
@@ -86,4 +75,6 @@ public class Tenants_Fragment extends Fragment {
         super.onStop();
         ((AppCompatActivity)getActivity()).getSupportActionBar().show();
     }
+
+
 }

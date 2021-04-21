@@ -36,9 +36,9 @@ public class TenantsAdapter extends RecyclerView.Adapter<TenantsAdapter.ProductV
         Tenant tenant = tenantList.get(position);
         holder.Firstname.setText(tenant.getFirst_name());
         holder.SecondName.setText(tenant.getSecond_name());
-        holder.PhoneNumber.setText(tenant.getPhone_number());
+        holder.PhoneNumber.setText("Phone Number: "+tenant.getPhone_number());
         holder.Email.setText(tenant.getEmail());
-        holder.Amount.setText("Ksh "+tenant.getAmount_paid());
+        holder.Amount.setText("Rent: Ksh "+tenant.getAmount_paid());
         holder.HouseNumber.setText("House Number: " + tenant.getHouse_number());
     }
 

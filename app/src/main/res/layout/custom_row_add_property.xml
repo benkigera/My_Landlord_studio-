@@ -3,11 +3,11 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="7"
-    android:background="#2C3E50">
+    android:background="@color/island_white">
 
     <TextView
         android:id="@+id/field"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_weight="3"
         android:layout_width="0dp"
         android:layout_height="40dp"
@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/value"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_weight="4"
         android:layout_width="0dp"
         android:layout_height="40dp"

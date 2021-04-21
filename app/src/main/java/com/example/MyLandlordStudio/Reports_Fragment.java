@@ -42,22 +42,12 @@ public class Reports_Fragment extends Fragment {
 
         //to use find View by id use container
         View view=inflater.inflate(R.layout.fragment_reports,container,false);
-        CardView monthly_reports_cardView = view.findViewById(R.id.monthly_reports_cardview);
         toolbar_reports=view.findViewById(R.id.toolbar_reports);
         toolbar_reports.inflateMenu(R.menu.refresh_menu);
         Menu menu=toolbar_reports.getMenu();
 
-        monthly_reports_cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //intent from fragment to activity
-                Intent monthly_reports_intent=new Intent(getActivity(), Monthly_reports_view_activity.class);
-                startActivity(monthly_reports_intent);
 
-            }
-        });
-
-        return view;
+     return view;
     }
 
 

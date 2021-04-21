@@ -40,9 +40,9 @@ public class PropertyActivity extends AppCompatActivity {
     private LinearLayout mDotLayout;
     private SliderAdapter sliderAdapter;
     private TextView[] mDots;
-    private TextView address,description,confirm;
+    private TextView tv1,topicTextview,nextTextview;
     private MaterialButton button;
-    private ProgressBar progressBar;
+    private ProgressBar mProgressBar;
     private TableLayout table_view;
 
     //Property fields
@@ -59,13 +59,6 @@ public class PropertyActivity extends AppCompatActivity {
 
     //Firebase
     FirebaseFirestore db;
-
-
-
-
-
-
-
 
 
 
@@ -90,6 +83,10 @@ public class PropertyActivity extends AppCompatActivity {
 
         mSlidePlayer=findViewById(R.id.mSlideViewPager);
         mDotLayout=findViewById(R.id.mDotLayout);
+        mProgressBar=findViewById(R.id.mProgressbar);
+        topicTextview=findViewById(R.id.topicTextview);
+        nextTextview=findViewById(R.id.nextTextview);
+
 
         sliderAdapter=new SliderAdapter(this);
         mSlidePlayer.setAdapter(sliderAdapter);
@@ -97,19 +94,25 @@ public class PropertyActivity extends AppCompatActivity {
         //adding a zoom out animation between sliders
         mSlidePlayer.setPageTransformer(true, new ZoomOutPageTransformer());
         button=findViewById(R.id.button_next);
+        tv1=findViewById(R.id.tv1);
 
         //textView
-        address=findViewById(R.id.address);
-        description=findViewById(R.id.description);
-        confirm=findViewById(R.id.confirm);
-        progressBar=findViewById(R.id.progressBar2);
+//        address=findViewById(R.id.address);
+//        description=findViewById(R.id.description);
+//        confirm=findViewById(R.id.confirm);
+//        progressBar=findViewById(R.id.progressBar2);
 
         mSlidePlayer.setOffscreenPageLimit(6);
 
 
 
 
-
+        mProgressBar.setProgress(33);
+        button.setBackgroundColor(getResources().getColor(R.color.gray));
+        button.setText("Next");
+        tv1.setText("1");
+        topicTextview.setText("Address Information");
+        nextTextview.setText("Next: "+"Description");
 
 
 
@@ -162,13 +165,6 @@ public class PropertyActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
     ViewPager.OnPageChangeListener viewListener=new ViewPager.OnPageChangeListener() {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -181,31 +177,36 @@ public class PropertyActivity extends AppCompatActivity {
 
             if (position==0){
 
+                mProgressBar.setProgress(33);
                 button.setBackgroundColor(getResources().getColor(R.color.gray));
                 button.setText("Next");
-                progressBar.setProgress(0);
+                tv1.setText("1");
+                topicTextview.setText("Address Information");
+                nextTextview.setText("Next: "+"Description");
+
 
 
             }
 
             if (position==1){
-                address.setText("✔");
-                address.setBackgroundResource( R.drawable.circle_green_xml);
-                progressBar.setProgress(50);
+
+
                 button.setBackgroundColor(getResources().getColor(R.color.gray));
                 button.setText("Next");
-                button.setTextColor(getResources().getColor(R.color.black));
-
-
+                mProgressBar.setProgress(66);
+                tv1.setText("2");
+                topicTextview.setText("Property Information");
+                nextTextview.setText("Next: "+"Confirmation");
 
             }
 
             if (position==2){
-                description.setText("✔");
-                description.setBackgroundResource( R.drawable.circle_green_xml);
-                progressBar.setProgress(100);
+                mProgressBar.setProgress(100);
                 button.setBackgroundColor(getResources().getColor(R.color.holo_green));
                 button.setText("Add property");
+                tv1.setText("3");
+                topicTextview.setText("Confirm Details");
+                nextTextview.setText("");
 
 
 
@@ -225,7 +226,7 @@ public class PropertyActivity extends AppCompatActivity {
                     }
                 });
 
-              /*  //initializing textInput fields find view by id for textInputEditText
+                //initializing textInput fields find view by id for textInputEditText
                 Location=findViewById(R.id.location);
                 Surbab=findViewById(R.id.surbab);
                 City=findViewById(R.id.city);
@@ -244,8 +245,7 @@ public class PropertyActivity extends AppCompatActivity {
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        confirm.setText("✔");
-                        confirm.setBackgroundResource(R.drawable.circle_green_xml);
+
                         String location = Location.getText().toString().trim();
                         String surbab = Surbab.getText().toString().trim();
                         String city = City.getText().toString().trim();
@@ -290,7 +290,7 @@ public class PropertyActivity extends AppCompatActivity {
                             });
                         }
                     }
-                });*/
+                });
 
             }
 

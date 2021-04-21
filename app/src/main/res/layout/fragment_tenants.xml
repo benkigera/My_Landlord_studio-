@@ -7,28 +7,63 @@
 
 
 
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/appbar_tenant">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:navigationIcon="@drawable/ic_menu_black_24dp">
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/top_app_bar"
+        android:layout_below="@+id/appbar_tenant"
         app:tabTextColor="#808080"
         android:background="@android:color/white"
         style="@style/Widget.MaterialComponents.TabLayout"
         app:tabRippleColor="@color/colorAccent"
-        app:tabIconTint="@color/colorAccent"/>
+        app:tabIconTint="@color/colorAccent"
+        app:tabIconTintMode="src_in"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabSelectedTextColor="@color/colorAccent"/>
+
+
+
+
+
+</com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+
+
 
 
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/tablayout"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar_tenant"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
-        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior" />
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        android:background="@color/island_white"/>
+
+
 
 
 

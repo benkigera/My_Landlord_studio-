@@ -83,13 +83,15 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_add_unit"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:text="Add units"
             android:textColor="@color/white"
             android:backgroundTint="@color/holo_green"
             android:gravity="center"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            />
 
 
     </LinearLayout>

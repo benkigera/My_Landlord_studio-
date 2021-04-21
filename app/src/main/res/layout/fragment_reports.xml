@@ -4,278 +4,612 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/fragment_reports">
+    android:id="@+id/fragment_reports"
+    android:background="@color/island_white">
 
 
 
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent">
 
         <com.google.android.material.appbar.AppBarLayout
 
+            android:id="@+id/top_app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/top_app_bar"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            android:elevation="0dp"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            app:elevation="0dp">
+            android:elevation="@dimen/cardview_default_radius">
+
 
             <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_reports"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@android:color/white"
-                app:navigationIcon="@drawable/ic_arrow_back_black"
-                android:id="@+id/toolbar_reports">
+                app:navigationIcon="@drawable/ic_menu_black_24dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:text="Reports"
-                    style="@style/TextAppearance.AppCompat.Title"
-                    />
 
             </androidx.appcompat.widget.Toolbar>
 
 
 
+            <com.google.android.material.tabs.TabLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tablayout"
+                android:layout_below="@+id/top_app_bar"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/colorAccent"
+                android:layout_centerHorizontal="true"
+                app:tabIndicatorHeight="2dp"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabTextColor="@color/gray">
+
+
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/january"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/january">
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/february"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/february">
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/march"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/march">
+
+
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/april"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/april">
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/may"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/may">
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/june"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/june">
+
+
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/july"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/july">
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/august"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/august">
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/september"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/september">
+
+
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/october"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/october">
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/november"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/november">
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/december"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/december">
+
+
+                </com.google.android.material.tabs.TabItem>
+
+
+
+
+            </com.google.android.material.tabs.TabLayout>
+
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <com.google.android.material.tabs.TabLayout
-
-            android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            android:id="@+id/tablayout"
-            android:layout_below="@+id/top_app_bar"
-            app:tabSelectedTextColor="@android:color/white"
-            app:tabIndicatorColor="@android:color/holo_green_light"
-            android:background="@drawable/tab_layout_background"
-            app:tabMode="scrollable"
-            app:tabBackground="@drawable/tab_layout_selector"
-            android:layout_centerHorizontal="true"
-            app:tabIndicatorHeight="0dp"
-            android:layout_marginVertical="15dp">
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:text="Monthly">
 
 
-            </com.google.android.material.tabs.TabItem>
-            <com.google.android.material.tabs.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:text="Yearly">
+       <LinearLayout
+           android:id="@+id/monthly_total_reports"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/top_app_bar"
+           android:orientation="vertical"
+           android:background="@color/island_white"
+           android:padding="10dp"
+           android:weightSum="2">
 
 
-            </com.google.android.material.tabs.TabItem>
-            <com.google.android.material.tabs.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:text="All time">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="TOTAL COLLECTED THIS MONTH"
+               android:textColor="@color/gray"
+               android:layout_weight="1"
+               android:textSize="12sp"
+               android:layout_marginLeft="8dp"
+               android:layout_marginRight="8dp"
+               android:layout_marginTop="10dp"/>
 
-
-            </com.google.android.material.tabs.TabItem>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="8dp"
+               android:layout_marginRight="8dp"
+               android:layout_marginTop="10dp"
+               android:weightSum="2">
 
 
 
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:text="$122,050.00"
+                   android:gravity="start"
+                   android:layout_weight="1"
+                   android:layout_gravity="center"
+                   android:textSize="20sp"
+                   android:textStyle="bold" />
+               <ProgressBar
+                   android:id="@+id/ProgressBar"
+                   style="?android:attr/progressBarStyleHorizontal"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:indeterminate="false"
+                   android:layout_weight="1"
+                   android:maxHeight="5dip"
+                   android:minHeight="5dip"
+                   android:progress="80"
+                   android:paddingLeft="@dimen/appbar_padding"
+                   android:progressDrawable="@drawable/greenprogress"
+                   android:layout_gravity="bottom"
+                   android:paddingBottom="@dimen/appbar_padding_top"/>
 
-        </com.google.android.material.tabs.TabLayout>
+           </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/black_container"
+
+
+
+
+
+
+
+       </LinearLayout>
+
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#ffffff"
-            android:orientation="vertical"
-            android:layout_below="@+id/tablayout">
+            android:layout_height="wrap_content"
+            android:columnOrderPreserved="false"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:layout_below="@+id/monthly_total_reports">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/income"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
-                android:layout_marginBottom="-3dp"
-                android:layout_below="@+id/grid_report"
-                app:cardBackgroundColor="@android:color/white">
+                android:id="@+id/outstanding">
 
 
 
+                <LinearLayout
+                    android:id="@+id/top_card_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/background"
+                    android:paddingBottom="10dp">
 
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_payment_white_24dp"
+                        android:background="@drawable/colorlesscirclebackground"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginStart="15dp" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:weightSum="2"
-                        android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="TOTAL UNPAID"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Income"
-                            android:textSize="13sp"
-                            android:textColor="@android:color/holo_green_light"
-                            android:layout_weight="1"/>
-
-
-
-
-
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$82,050.00"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:weightSum="3"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:padding="10dp">
-
-
+                        android:background="#1f000000"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="30dp"
+                        android:weightSum="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="KSH"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginStart="15dp"/>
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/ic_add_circle_green"
+                            app:srcCompat="@drawable/ic_keyboard_arrow_down_white"
                             android:layout_weight="1"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="250,000"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="30sp"
-                            android:layout_margin="10dp"
-                            android:textAlignment="center"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ksh"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_margin="10dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="(24%)"
-                            android:textColor="@android:color/holo_green_light"/>
+                            android:layout_gravity="end"/>
+                    </LinearLayout>
 
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp"
+                android:id="@+id/total_tenancies">
+
+
+
+                <LinearLayout
+                    android:id="@+id/top_card_tenancy_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+
+                    android:background="@drawable/background2"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_person_white_24dp"
+                        android:background="@drawable/colorlesscirclebackground"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginStart="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="TOTAL TENANCIES"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="34"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#1f000000"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="30dp"
+                        android:weightSum="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="January"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginStart="15dp"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_keyboard_arrow_down_white"
+                            android:layout_weight="1"
+                            android:layout_gravity="end"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp"
+                android:id="@+id/expenses">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/island_white"
+                    android:layout_alignParentTop="true"
+                    android:paddingLeft="@dimen/appbar_padding_top"
+                    android:weightSum="3"
+                    android:paddingStart="@dimen/appbar_padding_top">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_trending_up_green_24dp"
+                        android:layout_weight="2"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CLEARED"
+                        android:layout_weight="1"
+                        android:textColor="@color/holo_green" />
+
+                </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+
+
+                    <ProgressBar
+
+                        android:id="@+id/mProgressbar2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="220dp"
+                        android:layout_height="180dp"
+                        android:layout_centerInParent="true"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="80"
+                        android:progressDrawable="@drawable/occupancy"
+                        android:secondaryProgress="100" />
+
+
+                    <ImageView
+                        android:layout_width="220dp"
+                        android:layout_height="180dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_vacant"
+
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+
+                            android:id="@+id/textv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/textv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:paddingHorizontal="@dimen/appbar_padding_top"
+                            android:gravity="center"
+                            android:text="of"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/textV3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:gravity="center"
+                            android:text="40"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp"
+                android:id="@+id/expenses2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/island_white"
+                    android:layout_alignParentTop="true"
+                    android:paddingLeft="@dimen/appbar_padding_top"
+                    android:weightSum="3"
+                    android:paddingStart="@dimen/appbar_padding_top">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_trending_down_red_24dp"
+                        android:layout_weight="2" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="EXPENSES"
+                        android:layout_weight="1"
+                        android:textColor="#FF5B60" />
+
+                </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+
+
+                    <ProgressBar
+
+                        android:id="@+id/mProgressbar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="220dp"
+                        android:layout_height="180dp"
+                        android:layout_centerInParent="true"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="80"
+                        android:progressDrawable="@drawable/circular_vacant"
+                        android:secondaryProgress="100" />
+
+
+                    <ImageView
+                        android:layout_width="220dp"
+                        android:layout_height="180dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_vacant"
+
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+
+                            android:id="@+id/tv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:gravity="center"
+                            android:text="$ 5,000"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
 
 
                     </LinearLayout>
 
-                </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+
+
+
 
             </androidx.cardview.widget.CardView>
-
-
-
-        <GridLayout
-            android:id="@+id/grid_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnOrderPreserved="false"
-            android:alignmentMode="alignMargins"
-            android:columnCount="2"
-            android:rowCount="2"
-            >
-
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/rent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="10dp"
-                android:layout_below="@+id/grid_report"
-                app:cardBackgroundColor="#ffffff">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:weightSum="2"
-                    >
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_keyboard_arrow_up_black_24dp"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="1dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Select date range"
-                        android:textSize="13sp"
-                        android:textColor="@android:color/holo_purple"
-                        android:layout_weight="1"/>
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/send_reports_cardview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="10dp"
-                android:layout_below="@+id/grid_report"
-                app:cardBackgroundColor="#ffffff">
-
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:weightSum="2">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_send_black_24dp"
-                        android:layout_weight="1"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Send reports"
-                        android:textSize="13sp"
-                        android:textColor="@android:color/holo_orange_dark"
-                        android:layout_weight="1"/>
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-
-
-
 
 
 
@@ -285,60 +619,6 @@
 
         </GridLayout>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/simple"
-                />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/monthly_reports_cardview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/custom_button"
-                android:layout_below="@+id/black_container">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:weightSum="2">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Show reports by month"
-                        android:textSize="13sp"
-                        android:textColor="#FA71CD"
-                        android:layout_weight="1"/>
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:layout_weight="1"
-                        android:paddingRight="5dp"
-                        app:srcCompat="@drawable/ic_keyboard_arrow_light_pink" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-
-
-
-
-        </LinearLayout>
 
 
 
@@ -347,10 +627,5 @@
 
 
 
-
-
-
-
-
-    </RelativeLayout>
+       </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

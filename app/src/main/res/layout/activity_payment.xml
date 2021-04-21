@@ -60,11 +60,11 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textIputLayout_houseNumber"
+
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Select property"
+                android:hint="Propery name"
                 app:boxBackgroundMode="outline"
                 app:boxStrokeColor="#FFFA71CD"
                 android:layout_weight="1"
@@ -76,6 +76,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textIputLayout_propertyName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -106,7 +107,8 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout_Unit"
+
+                android:id="@+id/textInputLayout_houseNumber"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -121,6 +123,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/houseNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -155,7 +158,6 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/rent"
                 style="@style/Widget.App.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -171,6 +173,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/rent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -178,7 +181,6 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/water_bill"
                 style="@style/Widget.App.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -192,6 +194,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/water_bill"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -220,7 +223,6 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/first_name"
                 style="@style/Widget.App.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -234,6 +236,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/garbage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -241,7 +244,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Rent"
+
                 style="@style/Widget.App.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -254,6 +257,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/excess_paid"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -284,7 +288,7 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout_date"
+                android:id="@+id/Layout_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="MM/DD/YYYY"
@@ -296,9 +300,10 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/payment_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/current_date"/>
+                    />
 
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -324,7 +329,7 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textIputLayout_month"
+
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -340,6 +345,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textIputLayout_month"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -354,7 +360,7 @@
 
 
         <Button
-            android:id="@+id/outlinedButton"
+            android:id="@+id/outlinedButton_addPayment"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:text="Add Payment"

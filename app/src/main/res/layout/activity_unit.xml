@@ -5,6 +5,253 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Unit">
+    tools:context=".AddUnitActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorAccent"
+            app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:gravity="center"
+            android:id="@+id/add_unit_toolbar">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add units"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="20dp"
+            android:paddingEnd="20dp"
+            tools:ignore="RtlSymmetry"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_margin="10dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_location_city_black_24dp"
+                android:layout_gravity="center"
+                />
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type"
+                android:orientation="horizontal"
+                app:boxStrokeColor="#FFFA71CD">
+
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/unit_type_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="20dp"
+            android:paddingEnd="20dp"
+            tools:ignore="RtlSymmetry"
+            android:layout_margin="5dp"
+            android:weightSum="6">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/first_name_Layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="House number"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#FFFA71CD"
+                android:layout_weight="3"
+                android:paddingRight="10dp"
+                app:helperText="House number">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dropdown_house_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:id="@+id/second_name_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/floor"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#FFFA71CD"
+                android:layout_weight="3"
+                app:helperText="*select floor">
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/floor_exposed_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="number"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="20dp"
+            android:paddingEnd="20dp"
+            tools:ignore="RtlSymmetry"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_margin="10dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_person_black_24dp"
+                android:layout_gravity="center"
+                />
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/occupancy"
+                android:orientation="horizontal"
+                app:boxStrokeColor="#FFFA71CD">
+
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/occupancy_exposed_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="20dp"
+            android:paddingEnd="20dp"
+            tools:ignore="RtlSymmetry">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_margin="5dp"
+                android:id="@+id/unit_rent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rent"
+                app:boxBackgroundMode="outline"
+                app:helperText="enter unit's monthly rent"
+                app:boxStrokeColor="#FFFA71CD"
+                >
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/unit_rent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/floating_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:text="Add Unit"
+            app:icon="@drawable/plus"
+            app:layout_anchorGravity="center"
+            android:layout_gravity="center"
+            app:iconTint="@android:color/white"
+            android:textColor="@android:color/white"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

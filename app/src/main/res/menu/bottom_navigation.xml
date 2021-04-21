@@ -3,23 +3,23 @@
 
     <item
         android:id="@+id/Dashboard"
-        android:icon="@drawable/dashboard"
+        android:icon="@drawable/ic_dashboard_grey_24dp"
         android:title="Dashboard"
         
         />
     <item
         android:id="@+id/Reports"
-        android:icon="@drawable/report"
+        android:icon="@drawable/ic_pie_chart_grey_24dp"
         android:title="Reports"
         />
     <item
         android:id="@+id/Tenants"
-        android:icon="@drawable/tenant"
+        android:icon="@drawable/ic_person_grey_24dp"
         android:title="Tenants" />
     <item
         android:id="@+id/More"
-        android:icon="@drawable/more"
-        android:title="More"
+        android:icon="@drawable/ic_propery_key_black_24dp"
+        android:title="Properties"
         />
 
 </menu>

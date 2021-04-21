@@ -1,9 +1,12 @@
 package com.example.MyLandlordStudio;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,11 +19,14 @@ public class ApplicationFrame extends AppCompatActivity {
     Fragment selectedFragment=null;
     Toolbar toolbar;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        //getWindow().setStatusBarColor(Color.parseColor("#ffffff"));
 
         //bottom navigation bar code
 
@@ -37,7 +43,7 @@ public class ApplicationFrame extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu,menu);
+        getMenuInflater().inflate(R.menu.dashboard,menu);
         return true;
     }
 
@@ -45,8 +51,7 @@ public class ApplicationFrame extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();
 
-        if (id==R.id.share){Toast.makeText(getApplicationContext(),"Share the app",Toast.LENGTH_SHORT).show();
-        } else if (id==R.id.inbox)
+
     {Toast.makeText(getApplicationContext(),"See Your Messages",Toast.LENGTH_SHORT).show();}
 
         return true;
@@ -79,7 +84,7 @@ public class ApplicationFrame extends AppCompatActivity {
 
                                 break;
                             case R.id.More:
-                                selectedFragment=new More_Fragment();
+                                selectedFragment=new Properties_Fragment();
                                 item.setChecked(true);
 
                                 break;

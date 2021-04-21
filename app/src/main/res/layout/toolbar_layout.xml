@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:minHeight="?attr/actionBarSize"
     app:theme="@style/ToolbarTheme"
     android:id="@+id/main_toolbar"
-    android:background="@color/colorAccent"
+    android:background="@color/island_white"
     android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
     app:popupTheme= "@style/Theme.AppCompat.Light"
-    app:title="My Landlord Studio"
     app:titleMarginStart="40dp"
-    app:logo="@drawable/ic_menu_white_24dp"
-    android:maxHeight="?attr/windowActionBar">
+    app:title="MyLandlordStudio"
+    app:navigationIcon="@drawable/ic_menu_black_24dp"
+    app:itemBackground="@color/colorAccent"
+    android:maxHeight="?attr/windowActionBar"
+    app:titleTextColor="@color/black"
+    app:font="@style/TextAppearance.AppCompat.Title">
 
 
 

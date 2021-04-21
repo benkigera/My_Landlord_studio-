@@ -32,7 +32,7 @@
             android:id="@+id/welcome"
             android:layout_below="@+id/imageView"
             android:gravity="center"
-            android:textSize="23sp"
+            android:textSize="20sp"
             android:textStyle="bold"/>
 
 

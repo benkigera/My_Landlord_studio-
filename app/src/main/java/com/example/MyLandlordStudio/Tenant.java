@@ -1,7 +1,7 @@
 package com.example.MyLandlordStudio;
 
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.errorprone.annotations.Var;
+
+
 
 public class Tenant {
     private String first_name,second_name,phone_number,house_number;

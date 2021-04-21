@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:padding="5dp">
 
     <androidx.cardview.widget.CardView
@@ -25,10 +25,22 @@
             android:orientation="horizontal"
             >
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/avatar" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:cardCornerRadius="45dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/black">
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/paymentlogo"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/tenant_profile" />
+            </com.google.android.material.card.MaterialCardView>
+
 
             <TextView
                 android:id="@+id/textView_FirstName"
@@ -38,16 +50,28 @@
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textStyle="bold"
                 android:padding="5dp"
-                android:elevation="@dimen/cardview_default_radius"/>
+                android:elevation="@dimen/cardview_default_radius"
+                android:layout_gravity="center"/>
 
-            <TextView
-                android:id="@+id/textView_SecondName"
+            <TextView   android:id="@+id/textView_SecondName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Kigera"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textStyle="bold"
-                android:padding="0dp"/>
+                android:padding="0dp"
+                android:layout_gravity="center"/>
+
+            <TextView   android:id="@+id/entry_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" |2"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                android:padding="0dp"
+                android:layout_gravity="center"/>
+
+
 
 
 
@@ -62,7 +86,6 @@
             android:background="#F5F0F0">
 
 
-
             <TextView
                 android:id="@+id/textView_houseNumber"
                 android:layout_width="match_parent"
@@ -70,6 +93,7 @@
                 android:text="House Number: A12"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textStyle="bold" />
+
 
             <TextView
                 android:id="@+id/textView_email"

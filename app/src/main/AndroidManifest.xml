@@ -10,9 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".OnPropertyAddSuccess"></activity>
-        <activity android:name=".ViewTenantsActivity" />
-        <activity android:name=".PropertyListView" />
-        <activity android:name=".Unit" />
+        <activity android:name=".AddUnitActivity" />
         <activity android:name=".PropertyActivity" />
         <activity android:name=".PaymentActivity" />
         <activity android:name=".Tenant_details_activity" />

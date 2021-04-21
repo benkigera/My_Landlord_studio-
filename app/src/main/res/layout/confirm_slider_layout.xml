@@ -5,7 +5,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/confirm_layout">
+    android:id="@+id/confirm_layout"
+    android:background="@color/island_white">
 
     <LinearLayout
         android:layout_width="match_parent"

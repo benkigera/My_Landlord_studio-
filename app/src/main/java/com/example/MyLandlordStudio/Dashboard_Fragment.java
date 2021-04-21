@@ -1,6 +1,7 @@
 package com.example.MyLandlordStudio;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,12 +29,14 @@ public class Dashboard_Fragment extends Fragment {
 
 
 
+
+
         //to use find View by id use container
-        View view=inflater.inflate(R.layout.fragment_dashboard,container,false);
+       View view=inflater.inflate(R.layout.fragment_dashboard,container,false);
         CardView add_payment_cardview = view.findViewById(R.id.add_payment_cardview);
 
 
-        //floating action to add property list
+       // floating action to add property list
 
 
         floatingActionButton=view.findViewById(R.id.floating_action_button);
@@ -56,11 +59,8 @@ public class Dashboard_Fragment extends Fragment {
 
             }
         });
-        return view;
-
-
-
-
-
-    }
+      return view;}
 }
+
+
+

@@ -2,9 +2,15 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#FF5733</color>
     <color name="gray">	#C0C0C0</color>
     <color name="white">#ffffff</color>
     <color name="holo_green"> #99cc00</color>
     <color name="black">#000000</color>
+    <color name="lightest_sky">#E7EBE0FF</color>
+    <color name="star_white">#EFEFE8FF</color>
+    <color name="island_white">#FCF6F5FF</color>
+    <color name="york_yellow">#ffa62e</color>
+    <color name="soft_black">#212121</color>
+
 </resources>

@@ -4,9 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.graphics.MaskFilter;
 import android.os.Bundle;
-import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +17,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.auth.User;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -54,7 +51,7 @@ public class Tenant_details_activity extends AppCompatActivity {
 
         db=FirebaseFirestore.getInstance();
 
-        first_name=findViewById(R.id.first_name);
+        first_name=findViewById(R.id.dropdown_house_number);
         second_name=findViewById(R.id.second_name);
         phone_number=findViewById(R.id.phone_number);
         house_number=findViewById(R.id.house_number);
