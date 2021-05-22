@@ -103,30 +103,3 @@
         </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
-
-<!--<LinearLayout-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:orientation="horizontal"-->
-    <!--&gt;-->
-
-
-<!--&lt;!&ndash;<com.google.android.material.card.MaterialCardView&ndash;&gt;-->
-<!--&lt;!&ndash;android:layout_width="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;android:layout_height="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;app:strokeColor="@color/colorAccent"&ndash;&gt;-->
-<!--&lt;!&ndash;android:padding="20dp"&ndash;&gt;-->
-<!--&lt;!&ndash;android:background="@color/colorAccent">&ndash;&gt;-->
-<!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;android:layout_height="fill_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;android:id="@+id/paymentlogo"&ndash;&gt;-->
-<!--&lt;!&ndash;android:scaleType="fitCenter"&ndash;&gt;-->
-<!--&lt;!&ndash;android:background="@color/colorAccent"/>&ndash;&gt;-->
-<!--&lt;!&ndash;</com.google.android.material.card.MaterialCardView>&ndash;&gt;-->
-
-
-
-
-
-<!--</LinearLayout>-->

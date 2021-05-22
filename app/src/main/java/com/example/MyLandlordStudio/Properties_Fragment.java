@@ -69,7 +69,7 @@ public class Properties_Fragment extends Fragment {
 
                             adapter.notifyDataSetChanged();
                         } else {
-                            Toast.makeText(getActivity(), "You don't have tenants", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "No property to show", Toast.LENGTH_SHORT).show();
                         }
 
                     }

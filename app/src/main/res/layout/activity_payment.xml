@@ -1,10 +1,10 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
-    android:id="@+id/outlinedTextField"
+    android:id="@+id/property_listView_pay"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:context=".Tenant_details_activity"
+    tools:context=".PaymentActivity"
     xmlns:tools="http://schemas.android.com/tools">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -21,7 +21,10 @@
             app:subtitleTextColor="@color/cardview_shadow_start_color"
             app:layout_scrollFlags="scroll|enterAlways">
 
+
         </androidx.appcompat.widget.Toolbar>
+
+
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -44,313 +47,78 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingRight="30dp">
+            android:paddingRight="10dp">
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="50dp"
+                android:layout_width="60dp"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_location_city_black_24dp" />
-
-            </com.google.android.material.card.MaterialCardView>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Propery name"
-                app:boxBackgroundMode="outline"
-                app:boxStrokeColor="#FFFA71CD"
-                android:layout_weight="1"
-                app:counterEnabled="true"
-                app:counterMaxLength="10"
-                app:endIconDrawable="@drawable/ic_arrow_drop_down_black_24dp"
-                app:endIconMode="custom"
-                app:helperText="You can enter name here">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textIputLayout_propertyName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingRight="30dp">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="50dp"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"/>
-
-            </com.google.android.material.card.MaterialCardView>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-
-                android:id="@+id/textInputLayout_houseNumber"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Select Unit"
-                app:boxBackgroundMode="outline"
-                app:boxStrokeColor="#FFFA71CD"
-                android:layout_weight="1"
-                app:counterEnabled="true"
-                app:endIconDrawable="@drawable/ic_arrow_drop_down_black_24dp"
-                app:endIconMode="custom"
-                app:helperText="You can enter name here">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/houseNumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-        </LinearLayout>
-
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingRight="30dp">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="50dp"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                     />
-
-            </com.google.android.material.card.MaterialCardView>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.App.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:helperText="Enter monthly rent"
-                android:hint="Rent"
-                android:paddingRight="10dp"
-                app:boxBackgroundMode="outline"
-                app:boxStrokeColor="#FFFA71CD"
-                app:counterEnabled="true"
-                app:endIconMode="clear_text"
-                >
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/rent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.App.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="WaterBill"
-                app:boxBackgroundMode="outline"
-                app:boxStrokeColor="#FFFA71CD"
-                app:counterEnabled="true"
-                app:helperText="Enter monthly waterbill"
-                app:endIconMode="clear_text">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/water_bill"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingRight="30dp">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="50dp"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center" />
-
-            </com.google.android.material.card.MaterialCardView>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.App.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Garbage"
-                android:paddingRight="10dp"
-                app:boxBackgroundMode="outline"
-                app:boxStrokeColor="#FFFA71CD"
-                app:endIconMode="clear_text"
-                app:helperText="Garbage money">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/garbage"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-
-                style="@style/Widget.App.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Excess"
-                app:boxBackgroundMode="outline"
-                app:boxStrokeColor="#FFFA71CD"
-                app:endIconMode="clear_text"
-                app:helperText="Amount in excess">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/excess_paid"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingRight="30dp">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="50dp"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_date_range_black_24dp" />
-
-            </com.google.android.material.card.MaterialCardView>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Layout_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="MM/DD/YYYY"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:boxStrokeColor="#FFFA71CD"
-                app:endIconDrawable="@drawable/ic_date_range_black_24dp"
-                app:endIconMode="custom"
-                app:helperText="Pick payment date">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/payment_date"
+                <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    android:text="001"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp">
 
+                </com.google.android.material.textview.MaterialTextView>
 
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingRight="30dp">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="50dp"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_location_city_black_24dp" />
 
             </com.google.android.material.card.MaterialCardView>
 
 
-            <com.google.android.material.textfield.TextInputLayout
+            <com.google.android.material.card.MaterialCardView
 
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Rent for the month of"
-                app:boxBackgroundMode="outline"
-                app:boxStrokeColor="#FFFA71CD"
+                android:id="@+id/property_cardview"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
                 android:layout_weight="1"
-                app:counterEnabled="true"
-                app:counterMaxLength="10"
-                app:endIconDrawable="@drawable/ic_arrow_drop_down_black_24dp"
-                app:endIconMode="custom"
-                app:helperText="You can enter name here">
+                app:cardElevation="0dp"
+                android:backgroundTint="#e3f2fd"
+                app:cardCornerRadius="6dp"
+                android:clickable="true"
+                app:rippleColor="@color/colorAccent">
 
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textIputLayout_month"
+                <com.google.android.material.textview.MaterialTextView
+
+
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:hint="Blessed Apartment"
+                    app:boxStrokeColor="#FFFA71CD"
+                    android:layout_weight="1"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp">
 
 
-            </com.google.android.material.textfield.TextInputLayout>
+
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <View android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/holo_green"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_height="1dp"
+                    android:background="#000"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="40dp"/>
+                
+
+
+
+
+
+
+            </com.google.android.material.card.MaterialCardView>
 
 
 
@@ -359,23 +127,7 @@
 
 
 
-        <Button
-            android:id="@+id/outlinedButton_addPayment"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:text="Add Payment"
-            android:layout_gravity="center"
-            app:icon="@drawable/ic_check_box_black_24dp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-            app:iconTint="@color/colorAccent"
-            app:strokeColor="@color/colorAccent"
-            android:textColor="@color/colorAccent"
-            app:rippleColor="@color/colorAccent"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="40dp">
 
-
-        </Button>
 
 
 
